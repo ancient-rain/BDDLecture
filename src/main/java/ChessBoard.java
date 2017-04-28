@@ -1,11 +1,12 @@
 
 public class ChessBoard {
 
-	public void addPiece(Knight k, char x, int y) {
+	public void addPiece(Knight knight, char x, int y) {
 		
 	}
 	
-	public void movePiece(Knight k, char x, int y) {
-
+	public void movePiece(Knight knight, char x, int y) {
+		knight.x = x;
+		knight.y = y;
 	}
 }

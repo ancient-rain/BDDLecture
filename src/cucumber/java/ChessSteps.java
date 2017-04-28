@@ -13,20 +13,20 @@ public class ChessSteps {
 	    board = new ChessBoard();
 	}
 
-	@Given("^the black knight is placed on d (\\d+)$")
-	public void the_black_knight_is_placed_on_d(int y) throws Throwable {
+	@Given("^the black knight is placed on (.) (\\d+)$")
+	public void the_black_knight_is_placed_on(char x, int y) throws Throwable {
 		knight = new Knight("black");
-		board.addPiece(knight, 'd', y);
+		board.addPiece(knight, x, y);
 	}
 
-	@When("^the black knight tries to move to c (\\d+)$")
-	public void the_black_knight_tries_to_move_to_c(int y) throws Throwable {
-		board.movePiece(knight, 'c', y);
+	@When("^the black knight tries to move to (.) (\\d+)$")
+	public void the_black_knight_tries_to_move_to(char x, int y) throws Throwable {
+		board.movePiece(knight, x, y);
 	}
 
-	@Then("^the black knight is placed at c (\\d+)$")
-	public void the_black_knight_is_placed_at_c(int y) throws Throwable {
-	    assertEquals('c', knight.x);
+	@Then("^the black knight is placed at (.) (\\d+)$")
+	public void the_black_knight_is_placed_at(char x, int y) throws Throwable {
+	    assertEquals(x, knight.x);
 	    assertEquals(y, knight.y);
 	}
 }
