@@ -11,6 +11,6 @@ public class Knight {
 		int deltaX = Math.abs(row - x);
 		int deltaY = Math.abs(col - y);
 		System.out.println(x + " " + y);
-		return deltaX + deltaY == 3 && row != x;
+		return deltaX + deltaY == 3 && row != x && col != y;
 	}
 }
