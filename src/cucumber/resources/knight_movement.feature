@@ -45,10 +45,9 @@ Feature: Knight Movement
 	| color | original_x | original_y | second_x | second_y | new_x | new_y |
 	| black | d					 | 4				  | c			 	 | 6			  | b 		| 5		  |
 	
-	Scenario Outline: invalid moves adjacent
+	Scenario Outline: invalid moves up, down, left, right
 		Given an empty chessboard
 		And the black knight is placed on <original_x> <original_y>
-		And a second black knight is placed on <new_x> <new_y>
 		When the black knight tries to move to <new_x> <new_y>
 		Then the black knight remains at <original_x> <original_y>
 		And the user is told that the move failed
@@ -59,3 +58,4 @@ Feature: Knight Movement
 	| d					 | 4				  | d 		| 3		  |
 	| d					 | 4				  | c 		| 4		  |
 	| d					 | 4				  | e 		| 4		  |
+	| d					 | 4				  | d 		| 6		  |
