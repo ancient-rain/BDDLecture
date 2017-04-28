@@ -10,6 +10,3 @@ Feature: Knight Movement
     And the black knight is placed on d 4
     When the black knight tries to move to c 6
     And the black knight is placed at c 6
-    And yet another action
-    Then I validate the outcomes
-    And check more outcomes

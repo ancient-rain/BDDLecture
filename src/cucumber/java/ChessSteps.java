@@ -6,6 +6,7 @@ import static org.junit.Assert.*;
 
 public class ChessSteps {
 	ChessBoard board = null;
+	Knight knight = null;
 	
 	@Given("^an empty chessboard$")
 	public void an_empty_chessboard() throws Throwable {
