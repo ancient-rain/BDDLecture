@@ -44,3 +44,15 @@ Feature: Knight Movement
 	Examples:
 	| color | original_x | original_y | second_x | second_y | new_x | new_y |
 	| black | d					 | 4				  | c			 	 | 6			  | b 		| 5		  |
+	
+	Scenario Outline: invalid moves adjacent
+		Given an empty chessboard
+		And the black knight is placed on <original_x> <original_y>
+		And a second black knight is placed on <new_x> <new_y>
+		When the black knight tries to move to <new_x> <new_y>
+		Then the black knight remains at <original_x> <original_y>
+		And the user is told that the move failed
+		
+	Examples:
+	| original_x | original_y | new_x | new_y |
+	| d					 | 4				  | d 		| 5		  |
