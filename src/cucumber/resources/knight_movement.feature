@@ -64,3 +64,4 @@ Feature: Knight Movement
 	| d					 | 4				  | f 		| 4		  |
 	| d					 | 4				  | f 		| 4		  |
 	| a					 | 8				  | c 		| 9		  |
+	| a					 | 8				  | z 		| 6		  |
