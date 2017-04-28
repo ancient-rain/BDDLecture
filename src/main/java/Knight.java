@@ -6,4 +6,11 @@ public class Knight {
 	public Knight(String color) {
 
 	}
+	
+	public boolean validMove(char row, int col) {
+		int deltaX = Math.abs(row - x);
+		int deltaY = Math.abs(col - y);
+		
+		return deltaX + deltaY == 3;
+	}
 }

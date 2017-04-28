@@ -19,12 +19,16 @@ public class ChessBoard {
 	}
 	
 	public void movePiece(Knight knight, char x, int y) throws IOException {
-		if (!occupied(x, y)) {
+		if (validMove(knight, x, y)) {
 			knight.x = x;
 			knight.y = y;
 		} else {
 			stream.write("Move to location failed.\n".getBytes());
 		}
+	}
+	
+	private boolean validMove(Knight knight, char x, int y) {
+		return !occupied(x, y) && knight.validMove(x, y);
 	}
 	
 	private boolean occupied(char x, int y) {
