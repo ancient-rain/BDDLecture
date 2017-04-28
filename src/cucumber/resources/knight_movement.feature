@@ -67,3 +67,14 @@ Feature: Knight Movement
 	| a					 | 8				  | z 		| 6		  |
 	| h					 | 1				  | i 		| 3		  |
 	| h					 | 1				  | f 		| 0		  |
+	
+	Scenario Outline: capturing other color
+		Given an empty chessboard
+		And the <color_1> knight is placed on <original_x> <original_y>
+		And a second <color_2> knight is placed on <second_x> <second_y>
+		When the <color_1> knight tries to move to <second_x> <second_y>
+		Then the <color_1> knight is placed at <second_x> <second_y>
+		
+	Examples:
+	| color_1 | color_2 | original_x | original_y | second_x | second_y |
+	| black 	| white		| d			   	 | 4			 	  | c			   | 6 		 		| 
