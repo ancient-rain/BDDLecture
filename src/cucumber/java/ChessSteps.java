@@ -4,13 +4,17 @@ import cucumber.api.java.en.When;
 
 import static org.junit.Assert.*;
 
+import java.io.ByteArrayOutputStream;
+
 public class ChessSteps {
-	ChessBoard board = null;
-	Knight knight = null;
+	public ChessBoard board = null;
+	public Knight knight = null;
+	public ChessBoard outstream = null;
 	
 	@Given("^an empty chessboard$")
 	public void an_empty_chessboard() throws Throwable {
 	    board = new ChessBoard();
+	    outstream = new ChessBoard(outstream);
 	}
 
 	@Given("^the black knight is placed on (.) (\\d+)$")

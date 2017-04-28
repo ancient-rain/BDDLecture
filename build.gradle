@@ -33,7 +33,7 @@ jacocoTestReport {
 
 dependencies {
     testCompile 'junit:junit:4.+', 'info.cukes:cucumber-java:1.2.2'
-    cucumberCompile 'junit:junit:4.+', 'info.cukes:cucumber-java:1.2.2'
+    cucumberCompile 'junit:junit:4.+', 'info.cukes:cucumber-java:1.2.2', 'info.cukes:cucumber-picocontainer:1.2.5'
 }
 
 

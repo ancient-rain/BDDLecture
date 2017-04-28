@@ -8,7 +8,7 @@ Feature: Knight Movement
     Given an empty chessboard
     And the black knight is placed on <original_x> <original_y>
     When the black knight tries to move to <new_x> <new_y>
-    And the black knight is placed at <new_x> <new_y>
+    And the black knight is placed at <new_x> <new_y> 	
 
 	Examples:
 	| original_x | original_y | new_x | new_y |
@@ -21,3 +21,15 @@ Feature: Knight Movement
 	| d					 | 4					|	b			|	3			|
 	| d					 | 4					|	b			|	5			|
 	| h					 | 1					|	f			|	2			|
+	
+	Scenario Outline: invalid moves
+		Given an empty chessboard
+		And the <color> knight is placed on <original_x> <original_y>
+		And a second <color> knight is placed on <second_x> <second_y>
+		When the <color> knight tries to move to <new_x> <new_y>
+		Then the <color> knight remains at <original_x> <original_y>
+		And the user is told that the move failed
+		
+	Examples:
+	| color | original_x | original_y | second_x | second_y | new_x | new_y |
+	| black | d					 | 4				  | c			 	 | 6			  | c 		| 6		  |
