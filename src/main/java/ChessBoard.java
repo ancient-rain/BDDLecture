@@ -27,8 +27,17 @@ public class ChessBoard {
 		}
 	}
 	
+	
+	
 	private boolean validMove(Knight knight, char x, int y) {
-		return !occupied(x, y) && knight.validMove(x, y);
+		return onBoard(x, y) && !occupied(x, y) && knight.validMove(x, y);
+	}
+	
+	private boolean onBoard(char x, int y) {
+		boolean inCol = x >= 'a' && x <= 'h';
+		boolean inRow = y >= 1 && y <= 8;
+		
+		return inCol && inRow;
 	}
 	
 	private boolean occupied(char x, int y) {
