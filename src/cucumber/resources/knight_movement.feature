@@ -45,7 +45,7 @@ Feature: Knight Movement
 	| color | original_x | original_y | second_x | second_y | new_x | new_y |
 	| black | d					 | 4				  | c			 	 | 6			  | b 		| 5		  |
 	
-	Scenario Outline: invalid moves up, down, left, right
+	Scenario Outline: invalid moves
 		Given an empty chessboard
 		And the black knight is placed on <original_x> <original_y>
 		When the black knight tries to move to <new_x> <new_y>
@@ -62,3 +62,5 @@ Feature: Knight Movement
 	| d					 | 4				  | d 		| 1		  |
 	| d					 | 4				  | a 		| 4		  |
 	| d					 | 4				  | f 		| 4		  |
+	| d					 | 4				  | f 		| 4		  |
+	| a					 | 8				  | c 		| 9		  |
