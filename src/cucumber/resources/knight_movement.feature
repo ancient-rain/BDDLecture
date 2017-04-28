@@ -14,3 +14,4 @@ Feature: Knight Movement
 	| original_x | original_y | new_x | new_y |
 	| d					 | 4					|	c			|	6			|
 	| d					 | 4					|	e			|	6			|
+	| d					 | 4					|	f			|	5			|
