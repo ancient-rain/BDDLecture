@@ -56,3 +56,4 @@ Feature: Knight Movement
 	Examples:
 	| original_x | original_y | new_x | new_y |
 	| d					 | 4				  | d 		| 5		  |
+	| d					 | 4				  | d 		| 3		  |
