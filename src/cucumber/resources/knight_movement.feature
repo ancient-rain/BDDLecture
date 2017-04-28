@@ -40,7 +40,6 @@ Feature: Knight Movement
 		And a second <color> knight is placed on <second_x> <second_y>
 		When the <color> knight tries to move to <new_x> <new_y>
 		Then the <color> knight remains at <new_x> <new_y>
-		And the user is told that the move failed
 		
 	Examples:
 	| color | original_x | original_y | second_x | second_y | new_x | new_y |
