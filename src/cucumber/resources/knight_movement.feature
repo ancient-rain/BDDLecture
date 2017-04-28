@@ -22,7 +22,7 @@ Feature: Knight Movement
 	| d					 | 4					|	b			|	5			|
 	| h					 | 1					|	f			|	2			|
 	
-	Scenario Outline: invalid moves
+	Scenario Outline: invalid move on ally
 		Given an empty chessboard
 		And the <color> knight is placed on <original_x> <original_y>
 		And a second <color> knight is placed on <second_x> <second_y>

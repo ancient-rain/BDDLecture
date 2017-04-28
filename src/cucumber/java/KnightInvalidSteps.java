@@ -12,13 +12,13 @@ public class KnightInvalidSteps {
 	}
 	
 	@Given("^a second ([a-z]+) knight is placed on ([a-h]) (\\d+)$")
-	public void a_second_black_knight_is_placed_on(String color, char x, int y) throws Throwable {
+	public void a_second_knight_is_placed_on(String color, char x, int y) throws Throwable {
 	    anotherKnight = new Knight(color);
 	    steps.board.addPiece(this.anotherKnight, x, y);
 	}
 
-	@Then("^the black ([a-z]+) remains at ([a-h]) (\\d+)$")
-	public void the_black_knight_remains_at_d(char x, int y) throws Throwable {
+	@Then("^the ([a-z]+) knight remains at ([a-h]) (\\d+)$")
+	public void the_knight_remains_at(String color, char x, int y) throws Throwable {
 	    assertEquals(x, steps.knight.x);
 	    assertEquals(y, steps.knight.y);
 	}

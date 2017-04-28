@@ -3,8 +3,7 @@ public class Knight {
 	char x;
 	int y;
 	
-	public Knight(String team) {
-		this.x = 'c';
-		this.y = 6;
+	public Knight(String color) {
+
 	}
 }
