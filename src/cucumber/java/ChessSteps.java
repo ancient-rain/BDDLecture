@@ -17,19 +17,20 @@ public class ChessSteps {
 	    board = new ChessBoard(stream);
 	}
 
-	@Given("^the black knight is placed on (.) (\\d+)$")
-	public void the_black_knight_is_placed_on(char x, int y) throws Throwable {
-		knight = new Knight("black");
+	@Given("^the (black|white) knight is placed on (.) (\\d+)$")
+	public void the_black_knight_is_placed_on(String color, char x, int y) throws Throwable {
+		knight = new Knight(color);
 		board.addPiece(knight, x, y);
 	}
 
-	@When("^the black knight tries to move to (.) (\\d+)$")
-	public void the_black_knight_tries_to_move_to(char x, int y) throws Throwable {
+	@When("^the (black|white) knight tries to move to (.) (\\d+)$")
+	public void the_black_knight_tries_to_move_to(String color, char x, int y) throws Throwable {
 		board.movePiece(knight, x, y);
 	}
 
-	@Then("^the black knight is placed at (.) (\\d+)$")
-	public void the_black_knight_is_placed_at(char x, int y) throws Throwable {
+	@Then("^the (black|white) knight is placed at (.) (\\d+)$")
+	public void the_black_knight_is_placed_at(String color, char x, int y) throws Throwable {
+		assertEquals(color, knight.color);
 	    assertEquals(x, knight.x);
 	    assertEquals(y, knight.y);
 	}

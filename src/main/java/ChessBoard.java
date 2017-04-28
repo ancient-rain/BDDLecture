@@ -30,7 +30,7 @@ public class ChessBoard {
 	
 	
 	private boolean validMove(Knight knight, char x, int y) {
-		return onBoard(x, y) && !occupied(x, y) && knight.validMove(x, y);
+		return onBoard(x, y) && !occupied(knight.color, x, y) && knight.validMove(x, y);
 	}
 	
 	private boolean onBoard(char x, int y) {
@@ -40,10 +40,10 @@ public class ChessBoard {
 		return inCol && inRow;
 	}
 	
-	private boolean occupied(char x, int y) {
+	private boolean occupied(String color, char x, int y) {
 		for (Knight k : knights) {
 			if (k.x == x && k.y == y) {
-				return true;
+				return k.color.equals(color);
 			}
 		}
 		return false;
