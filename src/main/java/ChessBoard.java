@@ -6,7 +6,6 @@ public class ChessBoard {
 	}
 	
 	public void movePiece(Knight knight, char x, int y) {
-		knight.x = x;
-		knight.y = y;
+	
 	}
 }
