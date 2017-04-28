@@ -9,12 +9,12 @@ import java.io.ByteArrayOutputStream;
 public class ChessSteps {
 	public ChessBoard board = null;
 	public Knight knight = null;
-	public ChessBoard outstream = null;
+	public ByteArrayOutputStream stream = null;
 	
 	@Given("^an empty chessboard$")
 	public void an_empty_chessboard() throws Throwable {
-	    board = new ChessBoard();
-	    outstream = new ChessBoard(outstream);
+		stream = new ByteArrayOutputStream();
+	    board = new ChessBoard(stream);
 	}
 
 	@Given("^the black knight is placed on (.) (\\d+)$")
