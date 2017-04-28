@@ -77,4 +77,5 @@ Feature: Knight Movement
 		
 	Examples:
 	| color_1 | color_2 | original_x | original_y | second_x | second_y |
-	| black 	| white		| d			   	 | 4			 	  | c			   | 6 		 		| 
+	| black 	| white		| d			   	 | 4			 	  | c			   | 6 		 		|
+	| white 	| black		| d			   	 | 4			 	  | c			   | 6 		 		|  
